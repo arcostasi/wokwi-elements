@@ -1,5 +1,6 @@
 // Reference: https://cdn-learn.adafruit.com/assets/assets/000/036/494/original/lcds___displays_fabprint.png?1476374574
-import { customElement, html, LitElement, property, SVGTemplateResult, css } from 'lit-element';
+import { css, html, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 import { ElementPin, i2c } from './pin';
 
 type CanvasContext = CanvasRenderingContext2D | null | undefined;
@@ -69,7 +70,7 @@ export class SSD1306Element extends LitElement {
     }
   }
 
-  render(): SVGTemplateResult {
+  render() {
     const { width, height, screenWidth, screenHeight, imageData } = this;
     const visibility = imageData ? 'visible' : 'hidden';
     return html`<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
