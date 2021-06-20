@@ -14,7 +14,7 @@ storiesOf('Arduino Uno', module)
         .ledTX=${boolean('TX LED', false)}
         .ledRX=${boolean('RX LED', false)}
         .ledPower=${boolean('Power LED', true)}
-      ></wokwi-7segment>
+      ></wokwi-arduino-uno>
     `
   )
   .add(
